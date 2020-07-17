@@ -17,7 +17,8 @@ public class ExplodingBees extends JavaPlugin implements Listener
     @EventHandler(ignoreCancelled = true)
     public void onEntityDamageByEntity(EntityDamageByEntityEvent event)
     {
-        if(event.getDamager().getType() == EntityType.BEE && event.getEntityType() == EntityType.PLAYER)
+        if(event.getDamager().getType() == EntityType.BEE && event.getEntityType() == EntityType.PLAYER &&
+                event.getEntity().hasPermission("explodingbees.explode"))
         {
             event.getDamager().getWorld().createExplosion(event.getDamager().getLocation(), 4.0F);
             event.getDamager().remove();

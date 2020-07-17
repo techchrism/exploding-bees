@@ -3,3 +3,6 @@ version: ${project.version}
 main: com.darkender.plugins.explodingbees.ExplodingBees
 api-version: 1.15
 author: Techdoodle
+permissions:
+  explodingbees.explode:
+    default: true
